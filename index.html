@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./portfolio.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        Alexander Sherbrooke's Portfolio
+    </header>
+    <main>
+        <h1>Here's a selection of my favorite projects.</h1>
+        <p></p>
+        <div class="sectionHeader">
+            <h1>SlugSchedule</h1>
+            <p>Everything you need to enroll in one place</p>
+            <p class="info">2023 - Svelte</p>
+            <a target="_blank" href="https://cabalex.github.io/slugschedule">Check it out</a>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>The original class search was <i>slow...</i></h2>
+                <p>When I enrolled for my first quarter at Santa Cruz, I was baffled at how the course enrollment experience felt. Everything takes forever to load, and it's missing crucial information about the classes I want to take. How can I tell when classes overlap, what professors are good and bad, and when classes fill up?</p>
+            </div>
+            <div class="media video">
+                <video src="./assets/slugschedule/pisa.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>...so let's make it better!</h2>
+                <p>I wanted to design a class search app so that it was a central source of information, while not feeling overwhelming.</p>
+                <p>The app makes it as easy as possible to compare classes, instructors, and sections. At your fingertips, there's</p>
+                <ul>
+                    <li>Class and section information</li>
+                    <li>Walking distances (based on your residence of choice)</li>
+                    <li>Enrollment history</li>
+                    <li>Grade distributions</li>
+                    <li>RateMyProfessors reviews and scores</li>
+                </ul>
+            </div>
+            <div class="media video">
+                <video src="./assets/slugschedule/demo.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Schedule with style.</h2>
+                <p>Once you star a class you like, you can add it directly to your schedule. Class times will turn orange or red to show conflicting times.</p>
+            </div>
+            <div class="media video">
+                <video src="./assets/slugschedule/demo2.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Get a head start on enrollment!</h2>
+                <p>You can directly copy class codes into your shopping cart. The website also easily lets you share schedules, either by link or QR code.</p>
+            </div>
+            <div class="media double">
+                <img style="border-radius: 20px" src="./assets/slugschedule/share1.png">
+                <img style="border-radius: 20px" src="./assets/slugschedule/share2.png">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>It's extremely popular!</h2>
+                <p>SlugSchedule currently boasts over 1.7k active users, and it's still growing. Thousands of students rely on it every quarter to enroll in their classes.</p>
+            </div>
+            <div class="media">
+                <img src="./assets/slugschedule/popular.png">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Built to last!</h2>
+                <p>I wanted to keep the website running without ads or donations, even long after I left UCSC. It currently runs for <b>$0</b>, using a combination of clever static website hosting with GitHub Pages and CI/CD operations with GitHub Actions. I created a custom database format and compressed it using ZStandard to ensure fast loading times while remaining a static webpage.</p>
+            </div>
+            <div class="media">
+                <img src="./assets/slugschedule/githubActions.png">
+            </div>
+        </div>
+
+        
+        <div class="sectionHeader">
+            <h1 style="transform: rotate(-1deg)">GARR TOOL Technical Advisor</h1>
+            <p>Calculate tooling parameters for CAD/CAM systems</p>
+            <p class="info">2022 - React + PHP</p>
+            <a target="_blank" href="https://www.garrtool.com/calc/index.html">Check it out</a>
+            <div class="hero">
+                
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Built for a non-tech-savvy crowd</h2>
+                <p>I was contracted during the summer to build a machining calculator for engineers who were highly experienced in their field, but maybe not with computers. It was a struggle balancing density with content, but I eventually landed on a layout that made everyone happy.</p>
+            </div>
+            <div class="media double">
+                <img src="./assets/garr/garrWireframe1.png" width="400px">
+                <img src="./assets/garr/garrWireframe2.png" width="400px">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2></h2>
+                <p>Relying on algorithms provided by the tooling company, I built a PHP backend that supplied the React frontend with the proper tools based on your search parameters. The history tab and localStorage ensures you can make any modifications you need.</p>
+            </div>
+            <div class="media video">
+                <video src="./assets/garr/demo.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Used by thousands of machinists every day</h2>
+                <p>It's not just me - thousands of machinists rely on the tool every day to generate reliable parameter recommendations. It's even proudly displayed on the front page of their website!</p>
+            </div>
+            <div class="media">
+                <img src="./assets/garr/popular.png">
+            </div>
+        </div>
+
+        <div class="sectionHeader">
+            <h1>Santa Cruz Sidekick</h1>
+            <p>Stay in the loop with everything on campus</p>
+            <p class="info">2024 - SvelteKit</p>
+            <a target="_blank" href="https://santacruz-sidekick.vercel.app">Check it out</a>
+            <div class="hero">
+                
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Get real-time information on <u>everything</u>.</h2>
+                <p>Sidekick's map shows you</p>
+            </div>
+            <div class="media">
+                <img src="./assets/sidekick/map.png">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>By everything, I mean <u>everything</u>.</h2>
+                <p>Find dining halls with your favorite foods on the menu.<br>Check when the next bus is coming.<br>See if there's an open laundry machine.<br>Is that food truck stil on campus?<br>Any cool parties happening tonight?<br>What was that noise I just heard?<br>And more...</p>
+            </div>
+            <div class="media double">
+                <img height="700px" style="left: 0px" src="./assets/sidekick/sidebar2.png">
+                <img height="700px" src="./assets/sidekick/sidebar1.png">
+            </div>
+        </div>
+        <div class="feature" style="margin-top: 0">
+            <div class="text">
+                <h2>Stay in the loop</h2>
+                <p>Every campus social media feed is here, thanks to Sidekick's content curation. Never miss anything that's going on!</p>
+            </div>
+            <div class="media video" style="transform: none; flex-basis: 100%">
+                <video style="box-shadow: none" src="./assets/sidekick/demo.mp4" autoplay loop muted></video>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Custom backend tooling</h2>
+                <p>Using Vite imports, I created a custom backend API to make it much easier to create apps. Simply create a few components and they'll seamlessly integrate themselves with the website!</p>
+            </div>
+            <div class="media double">
+                <img height="400px" style="left: 50%" src="./assets/sidekick/apps.png">
+                <img src="./assets/sidekick/apps2.png">
+            </div>
+        </div>
+        
+        <div class="sectionHeader">
+            <h1 style="transform: rotate(-1deg)">Astral Chain Quest Editor</h1>
+            <p>Create mods for Astral Chain without any programming experience</p>
+            <p class="info">2024 - Svelte</p>
+            <a target="_blank" href="https://cabalex.github.io/ac-quest-editor">Check it out</a>
+            <div class="hero">
+                
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>A labor of love</h2>
+                <p>I thought I'd also highlight one of my more fun projects! I've been working on creating Astral Chain mods for years - it's a game I'm really passionate about. This tool is built upon months of reverse engineering work and looking into the game's files.</p>
+            </div>
+            <div class="media">
+                <img src="./assets/astralchain">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Title</h2>
+                <p>Body</p>
+            </div>
+            <div class="media">
+                <img src="./assets/astralchain">
+            </div>
+        </div>
+        <div class="feature">
+            <div class="text">
+                <h2>Title</h2>
+                <p>Body</p>
+            </div>
+            <div class="media">
+                <img src="./assets/astralchain">
+            </div>
+        </div>
+    </main>
+    <footer>
+        2025 Alexander Sherbrooke
+    </footer>
+</body>
+</html>

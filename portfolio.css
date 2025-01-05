@@ -56,10 +56,7 @@ main {
     font-size: 0.8em;
     color: #777;
 }
-.sectionHeader a {
-    position: absolute;
-    right: 10px;
-    top: 50%;
+.sectionHeader a, .buttonLink {
     font-size: 20px;
     transform: translateY(-50%);
     background-color: #111;
@@ -69,16 +66,24 @@ main {
     color: var(--primary);
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.sectionHeader a:after {
+.buttonLink {
+    outline: 2px solid #111;
+}
+.sectionHeader a {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+.sectionHeader a:after, .buttonLink:after {
     content: '→';
     margin-left: 5px;
     margin-right: 15px;
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.sectionHeader a:hover, .sectionHeader a:active {
+.sectionHeader a:hover, .sectionHeader a:active, .buttonLink:hover, .buttonLink:active {
     background-color: #333;
 }
-.sectionHeader a:hover:after, .sectionHeader a:active:after {
+.sectionHeader a:hover:after, .sectionHeader a:active:after, .buttonLink:hover:after, .buttonLink:active:after {
     margin-left: 20px;
     margin-right: 0px;
 }
@@ -157,6 +162,46 @@ main {
 }
 .feature .media.double img:nth-child(2) {
     pointer-events: none;
+}
+
+.quotes {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quote {
+    background-color: #111;
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: calc(50% - 50px);
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.2s ease-in-out;
+}
+.quote p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    flex-grow: 1;
+    height: 100%;
+}
+.quote .credit {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.quote .credit img {
+    border-radius: 5px;
+    width: 36px;
+    height: 36px;
+}
+.quote:hover {
+    background-color: #222;
 }
 
 footer {

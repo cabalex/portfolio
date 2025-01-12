@@ -28,9 +28,34 @@ h1, h2, h3, h4 {
 header {
     background-color: var(--primary);
     padding: 10px;
-    text-align: center;
-    margin-bottom: 20px;
+    height: 200px;
+    padding: 0 20px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
 }
+header .text {
+    max-width: 50%;
+}
+header h1 {
+    margin: 0;
+}
+header .buttonLink {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    transform: unset;
+}
+img.sitting {
+    position: absolute;
+    right: 20%;
+    top: calc(100% - 210px);
+    width: 300px;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -46,8 +71,13 @@ main {
     top: 50px;
     box-shadow: 0 -20px 20px var(--bg);
     z-index: 10;
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+section {
+    margin-top: 100px;
 }
 .sectionHeader h1 {
+    font-size: 1.75em;
     position: absolute;
     top: -40px;
     left: 20px;
@@ -80,8 +110,14 @@ main {
     right: 10px;
     top: 50%;
 }
-.sectionHeader a:after, .buttonLink:after {
+.sectionHeader a:after, .buttonLink:not(.reverse):after {
     content: '→';
+    margin-left: 5px;
+    margin-right: 15px;
+    transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.buttonLink.reverse:before {
+    content: '←';
     margin-left: 5px;
     margin-right: 15px;
     transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -92,6 +128,10 @@ main {
 .sectionHeader a:hover:after, .sectionHeader a:active:after, .buttonLink:hover:after, .buttonLink:active:after {
     margin-left: 20px;
     margin-right: 0px;
+}
+.buttonLink.reverse:hover:before {
+    margin-left: 0px;
+    margin-right: 20px;
 }
 .sectionHeader .hero {
     position: absolute;
@@ -142,6 +182,20 @@ main {
 .feature .media img {
     max-width: min(90%, 600px);
     border-radius: 5px;
+}
+.feature:nth-child(2n) .media.double {
+    justify-content: flex-start;
+}
+.feature:nth-child(2n) .media.double img:nth-child(1) {
+    left: 50%;
+    transform: rotate(-4deg) translateX(-50%);
+}
+.feature:nth-child(2n+1) .media.double {
+    justify-content: flex-end;
+}
+.feature:nth-child(2n+1) .media.double img:nth-child(1) {
+    left: 50%;
+    transform: rotate(-4deg) translateX(-50%);
 }
 .feature .media.double {
     margin-top: 20px;
@@ -219,4 +273,78 @@ footer {
     align-items: center;
     text-align: center;
     margin-top: 20px;
+    position: relative;
+}
+img.fallen {
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    width: 200px;
+}
+
+@media screen and (max-width: 1400px) {
+    .media.double:nth-child(2n+1) img:nth-child(1) {
+        left: 50px !important;
+    }
+    img.sitting, img.fallen {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        height: 500px;
+        padding: 0 20px;
+    }
+    header .text {
+        max-width: unset;
+        padding-bottom: 50px;
+    }
+    footer {
+        padding-bottom: 100px;
+    }
+    img.fallen {
+        right: 10px;
+    }
+    .sectionHeader {
+        top: 10px;
+        border-radius: 5px;
+    }
+    .sectionHeader h1 {
+        position: unset;
+        margin: 0;
+        font-size: 1.5em;
+        transform: unset !important;
+    }
+    .sectionHeader p {
+        margin-top: 0;
+    }
+    .sectionHeader a {
+        top: 100%;
+        font-size: 1em;
+    }
+    .feature, .feature:nth-child(2n) {
+        flex-direction: column;
+    }
+    .feature .media {
+        margin: 50px 0 !important;
+        padding-bottom: calc(var(--mobile-height, 0) + 200px) !important;
+    }
+    .quotes {
+        flex-direction: column;
+    }
+    .quotes > a {
+        width: calc(100% - 40px);
+    }
+    .feature .media.double {
+        margin-bottom: 100px !important;
+    }
+    .feature .media.double img:nth-child(1) {
+        top: 80px;
+        left: 50% !important;
+        transform: rotate(-4deg) translateX(-50%);
+    }
+    .caseStudy {
+        font-size: 1em;
+    }
 }
